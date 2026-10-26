@@ -1,6 +1,6 @@
 [
     {
-        "bundle_name": "Astral Defender Offer (Fallback Feed)",
+        "bundle_name": "Astral Defender Offer (Fallback)",
         "price_usd": 24.99,
         "historical_low_usd": 24.99,
         "is_all_time_low": true,
@@ -15,28 +15,8 @@
             "estimated_power_cores_saved": 4225,
             "estimated_farming_days_saved": 16.9
         },
-        "meta_impact": "Meta Defining (Essential for Raids/CC)",
+        "meta_impact": "Meta Defining",
         "verdict": "⭐ Great Value (משתלם מאוד לאירועים) [📉 שפל היסטורי!]",
-        "last_updated": "2026-10-26 17:29:29"
-    },
-    {
-        "bundle_name": "Alliance War Gear Cache",
-        "price_usd": 9.99,
-        "historical_low_usd": 9.99,
-        "is_all_time_low": true,
-        "calculated_value_usd": 17.5,
-        "value_ratio": 1.75,
-        "roi_percentage": 75.2,
-        "event_milestone": {
-            "total_points": 1500,
-            "points_per_dollar": 150.2
-        },
-        "farming_equivalency": {
-            "estimated_power_cores_saved": 875,
-            "estimated_farming_days_saved": 3.5
-        },
-        "meta_impact": "Standard Progression",
-        "verdict": "⚖️ Fair (גבולי / תלוי צורך אישי) [📉 שפל היסטורי!]",
-        "last_updated": "2026-10-26 17:29:29"
+        "last_updated": "2026-10-26 17:40:45"
     }
 ]
