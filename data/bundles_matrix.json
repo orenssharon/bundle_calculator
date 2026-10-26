@@ -1,0 +1,29 @@
+[
+    {
+        "bundle_name": "Mega Character Shard Blitz Pack",
+        "price_usd": 19.99,
+        "calculated_value_usd": 70.0,
+        "value_ratio": 3.5,
+        "roi_percentage": 250.2,
+        "verdict": "✅ Good Value (שווה קנייה)",
+        "last_updated": "2026-10-26 16:56:26"
+    },
+    {
+        "bundle_name": "Starter Gear Booster",
+        "price_usd": 4.99,
+        "calculated_value_usd": 7.75,
+        "value_ratio": 1.55,
+        "roi_percentage": 55.3,
+        "verdict": "⚖️ Fair (גבולי / תלוי צורך)",
+        "last_updated": "2026-10-26 16:56:26"
+    },
+    {
+        "bundle_name": "Overpriced Whale Trap Bundle",
+        "price_usd": 49.99,
+        "calculated_value_usd": 7.0,
+        "value_ratio": 0.14,
+        "roi_percentage": -86.0,
+        "verdict": "❌ Trap Offer (מלכודת תקציב)",
+        "last_updated": "2026-10-26 16:56:26"
+    }
+]
