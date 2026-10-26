@@ -1,62 +1,42 @@
 [
     {
-        "bundle_name": "Mega Character Shard Blitz Pack",
-        "price_usd": 19.99,
-        "historical_low_usd": 19.99,
-        "is_all_time_low": true,
-        "calculated_value_usd": 70.0,
-        "value_ratio": 3.5,
-        "roi_percentage": 250.2,
-        "event_milestone": {
-            "total_points": 4500,
-            "points_per_dollar": 225.1
-        },
-        "farming_equivalency": {
-            "estimated_power_cores_saved": 3500,
-            "estimated_farming_days_saved": 14.0
-        },
-        "meta_impact": "Meta Defining (Essential for Raids/CC)",
-        "verdict": "⭐ Great Value (משתלם מאוד לאירועים)",
-        "last_updated": "2026-10-26 17:05:00"
-    },
-    {
-        "bundle_name": "Starter Gear Booster",
-        "price_usd": 4.99,
-        "historical_low_usd": 3.99,
-        "is_all_time_low": false,
-        "calculated_value_usd": 7.75,
-        "value_ratio": 1.55,
-        "roi_percentage": 55.3,
-        "event_milestone": {
-            "total_points": 800,
-            "points_per_dollar": 160.3
-        },
-        "farming_equivalency": {
-            "estimated_power_cores_saved": 387,
-            "estimated_farming_days_saved": 1.5
-        },
-        "meta_impact": "Standard Progression",
-        "verdict": "⚖️ Fair (גבולי / תלוי צורך אישי)",
-        "last_updated": "2026-10-26 17:05:00"
-    },
-    {
-        "bundle_name": "Legacy Outdated Character Offer",
+        "bundle_name": "Astral Defender Offer (Live Scraped)",
         "price_usd": 24.99,
         "historical_low_usd": 24.99,
         "is_all_time_low": true,
-        "calculated_value_usd": 30.0,
-        "value_ratio": 1.2,
-        "roi_percentage": 20.0,
+        "calculated_value_usd": 84.5,
+        "value_ratio": 3.38,
+        "roi_percentage": 238.1,
         "event_milestone": {
-            "total_points": 200,
-            "points_per_dollar": 8.0
+            "total_points": 5000,
+            "points_per_dollar": 200.1
         },
         "farming_equivalency": {
-            "estimated_power_cores_saved": 1500,
-            "estimated_farming_days_saved": 6.0
+            "estimated_power_cores_saved": 4225,
+            "estimated_farming_days_saved": 16.9
         },
-        "meta_impact": "Obsolete / Out of Meta",
-        "verdict": "⚠️ High Value, But Obsolete (זהירות: דמות מיושנת במטה)",
-        "last_updated": "2026-10-26 17:05:00"
+        "meta_impact": "Meta Defining (Essential for Raids/CC)",
+        "verdict": "⭐ Great Value (משתלם מאוד לאירועים) [📉 שפל היסטורי!]",
+        "last_updated": "2026-10-26 17:19:30"
+    },
+    {
+        "bundle_name": "Alliance War Gear Cache",
+        "price_usd": 9.99,
+        "historical_low_usd": 9.99,
+        "is_all_time_low": true,
+        "calculated_value_usd": 17.5,
+        "value_ratio": 1.75,
+        "roi_percentage": 75.2,
+        "event_milestone": {
+            "total_points": 1500,
+            "points_per_dollar": 150.2
+        },
+        "farming_equivalency": {
+            "estimated_power_cores_saved": 875,
+            "estimated_farming_days_saved": 3.5
+        },
+        "meta_impact": "Standard Progression",
+        "verdict": "⚖️ Fair (גבולי / תלוי צורך אישי) [📉 שפל היסטורי!]",
+        "last_updated": "2026-10-26 17:19:30"
     }
 ]
