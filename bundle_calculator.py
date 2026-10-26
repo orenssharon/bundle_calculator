@@ -3,8 +3,12 @@ import json
 from datetime import datetime
 import urllib.request
 
-# כתובת חיצונית אמינה (למשל: קובץ JSON ציבורי או Google Sheets שמוגדר ל-CSV)
-EXTERNAL_DATA_URL = "https://raw.githubusercontent.com/username/msf-community-feeds/main/live_bundles.json"
+# רשימת המקורות החיצוניים בסדר עדיפות (Multi-Source Fallback)
+EXTERNAL_SOURCES = [
+    "https://gist.githubusercontent.com/orenssharon/YOUR_GIST_ID/raw/bundles.json", # מקור 3: מאגר קהילתי מנוהל (Gist)
+    "https://api.marvelstrikeforce.com/game/v1/offers",                           # מקור 1: ה-API הרשמי של Scopely
+    "https://msf.gg/data/bundles.json"                                            # מקור 2: פורטל הקהילה MSF.gg
+]
 
 # מחירון בסיס (Baseline Valuation) למשאבים במשחק
 RESOURCE_BASE_VALUES = {
@@ -32,25 +36,31 @@ def save_json(filepath, data):
 
 def fetch_external_bundles():
     """
-    מושך נתונים ממקור חיצוני יציב (כגון קובץ JSON ציבורי מרוחק)
+    סורק את רשימת המקורות החיצוניים אחד-אחד עד להצלחה. 
+    אם כולם נכשלים, עובר למנגנון הגיבוי המקומי.
     """
-    try:
-        req = urllib.request.Request(
-            EXTERNAL_DATA_URL,
-            headers={"User-Agent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64)"}
-        )
-        with urllib.request.urlopen(req, timeout=10) as response:
-            data = json.loads(response.read().decode('utf-8'))
-            if isinstance(data, list) and len(data) > 0:
-                print("Successfully fetched live data from external source.")
-                return data
-    except Exception as e:
-        print(f"External fetch failed ({e}), falling back to local dataset.")
+    for url in EXTERNAL_SOURCES:
+        try:
+            req = urllib.request.Request(
+                url,
+                headers={
+                    "User-Agent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64)",
+                    "x-api-key": os.environ.get("MSF_API_KEY", "") # מפתח אימות במידה ומשתמשים ב-API הרשמי
+                }
+            )
+            with urllib.request.urlopen(req, timeout=10) as response:
+                data = json.loads(response.read().decode('utf-8'))
+                if isinstance(data, list) and len(data) > 0:
+                    print(f"Successfully fetched live data from source: {url}")
+                    return data
+        except Exception as e:
+            print(f"Source failed ({url}): {e}")
     
-    # מנגנון גיבוי מקומי בטוח (Fallback)
+    print("Warning: All external sources failed. Falling back to secure local dataset.")
+    # מנגנון גיבוי מקומי למניעת עצירת האוטומציה
     return [
         {
-            "name": "Astral Defender Offer (Live Feed)",
+            "name": "Astral Defender Offer (Fallback Feed)",
             "price_usd": 24.99,
             "event_points": 5000,
             "meta_impact": "Meta Defining (Essential for Raids/CC)",
@@ -134,7 +144,7 @@ def main():
     history_file = "data/bundles_history.json"
     historical_data = load_json(history_file, {})
     
-    # שליפת הנתונים (ממקור חיצוני עם גיבוי אוטומטי)
+    # שליפת נתונים מרובת מקורות
     raw_bundles = fetch_external_bundles()
     
     results = [calculate_bundle_roi(b, historical_data) for b in raw_bundles]
@@ -142,7 +152,7 @@ def main():
     save_json(history_file, historical_data)
     results.sort(key=lambda x: x["value_ratio"], reverse=True)
     save_json("data/bundles_matrix.json", results)
-    print("Bundle matrix successfully updated via robust external data pipeline.")
+    print("Bundle matrix successfully updated via multi-source robust pipeline.")
 
 if __name__ == "__main__":
     main()
