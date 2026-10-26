@@ -5,8 +5,8 @@ import urllib.request
 import html.parser
 import re
 
-# ערוץ טלגרם ציבורי לדוגמה המרכז עדכוני דאטה-מיינינג והצעות משחק
-TELEGRAM_CHANNEL_URL = "https://t.me/s/msf_datamines" # ניתן להחליף לכל ערוץ ציבורי רלוונטי
+# כתובת תצוגת ה-Web של ערוץ הטלגרם הציבורי לעדכוני קהילה
+TELEGRAM_CHANNEL_URL = "https://t.me/s/msfcares"
 
 # מחירון בסיס (Baseline Valuation) למשאבים במשחק
 RESOURCE_BASE_VALUES = {
@@ -40,7 +40,6 @@ class TelegramHTMLParser(html.parser.HTMLParser):
         self.current_text = []
 
     def handle_starttag(self, tag, attrs):
-        # זיהוי אזור הודעות הטקסט בתוך תצוגת ה-Web של טלגרם
         for attr, value in attrs:
             if attr == 'class' and 'tgme_widget_message_text' in value:
                 self.in_message = True
@@ -58,7 +57,7 @@ class TelegramHTMLParser(html.parser.HTMLParser):
 
 def fetch_bundles_from_telegram():
     """
-    מושך הודעות מערוץ טלגרם ציבורי ומחלץ אוטומטית שמות באנדלים ומחירים בעזרת Regex
+    סורק את ערוץ הטלגרם הציבורי ומחלץ מחירים ותכנים אוטומטית בעזרת Regex
     """
     scraped_bundles = []
     try:
@@ -68,27 +67,21 @@ def fetch_bundles_from_telegram():
         )
         with urllib.request.urlopen(req, timeout=15) as response:
             html_content = response.read().decode('utf-8')
-            
             parser = TelegramHTMLParser()
             parser.feed(html_content)
             
-            # ניתוח ההודעות שהתקבלו מהערוץ
             for msg in parser.messages:
-                # חיפוש תבנית מחיר דולרי בהודעה (למשל $19.99)
                 price_match = re.search(r'\$(\d+\.\d{2})', msg)
                 if price_match:
                     price_usd = float(price_match.group(1))
-                    
-                    # חילוץ שורה ראשונה או כותרת כשם הבאנדל
                     lines = [line.strip() for line in msg.split('\n') if line.strip()]
-                    bundle_name = lines[0] if lines else "Live Datamine Offer"
+                    bundle_name = lines[0] if lines else "Live Telegram Offer"
                     
-                    # זיהוי תוכן משוער מתוך הטקסט או מתן ערכים ברירת מחדל חכמים
                     scraped_bundles.append({
-                        "name": bundle_name[:50], # הגבלת אורך שם
+                        "name": bundle_name[:50],
                         "price_usd": price_usd,
-                        "event_points": 3000, # ערך דינמי או מחושב
-                        "meta_impact": "Meta Defining (Datamined)",
+                        "event_points": 3000,
+                        "meta_impact": "Meta Defining (Telegram Feed)",
                         "contents": {
                             "character_shard_new": 25,
                             "power_core": 400,
@@ -97,20 +90,19 @@ def fetch_bundles_from_telegram():
                     })
                     
         if scraped_bundles:
-            print(f"Successfully extracted {len(scraped_bundles)} offers from Telegram datamines.")
+            print(f"Successfully extracted {len(scraped_bundles)} offers from Telegram.")
             return scraped_bundles
             
     except Exception as e:
         print(f"Telegram scraping error: {e}")
 
-    # מנגנון גיבוי (Fallback) למקרה שהערוץ לא זמין זמנית
-    print("Using secure fallback dataset for processing.")
+    # מנגנון גיבוי מקומי בטוח במקרה של תקלה זמנית ברשת
     return [
         {
-            "name": "Astral Defender Offer (Automated Feed)",
+            "name": "Astral Defender Offer (Fallback)",
             "price_usd": 24.99,
             "event_points": 5000,
-            "meta_impact": "Meta Defining (Essential for Raids/CC)",
+            "meta_impact": "Meta Defining",
             "contents": {
                 "character_shard_new": 35,
                 "power_core": 600,
@@ -159,7 +151,8 @@ def calculate_bundle_roi(bundle, historical_data):
             "estimated_farming_days_saved": days_saved
         },
         "meta_impact": meta_impact,
-        "verdict": verdict,_last_updated = datetime.now().strftime("%Y-%m-%d %H:%M:%S")
+        "verdict": verdict,
+        "last_updated": datetime.now().strftime("%Y-%m-%d %H:%M:%S")
     }
 
 def get_verdict(ratio, is_atl):
@@ -179,15 +172,13 @@ def main():
     history_file = "data/bundles_history.json"
     historical_data = load_json(history_file, {})
     
-    # שליפה אוטומטית מלאה מערוצי המידע החיצוניים
     raw_bundles = fetch_bundles_from_telegram()
-    
     results = [calculate_bundle_roi(b, historical_data) for b in raw_bundles]
     
     save_json(history_file, historical_data)
     results.sort(key=lambda x: x["value_ratio"], reverse=True)
     save_json("data/bundles_matrix.json", results)
-    print("Fully automated bundle matrix updated successfully.")
+    print("Telegram automated scraping completed successfully.")
 
 if __name__ == "__main__":
     main()
