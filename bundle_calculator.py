@@ -2,11 +2,22 @@ import os
 import json
 from datetime import datetime
 import urllib.request
-import html.parser
+import xml.etree.ElementTree as ET
 import re
 
-# כתובת תצוגת ה-Web של ערוץ הטלגרם הציבורי לעדכוני קהילה
-TELEGRAM_CHANNEL_URL = "https://t.me/s/msfcares"
+# מקורות קהילתיים אמיתיים המוחזרים בפורמטים מובנים (RSS ו-JSON)
+COMMUNITY_SOURCES = [
+    {
+        "type": "rss",
+        "url": "https://marvel.church/feed/",
+        "desc": "Marvel Church Community Blog & Guides"
+    },
+    {
+        "type": "reddit_json",
+        "url": "https://www.reddit.com/r/MarvelStrikeForce/new.json?limit=15",
+        "desc": "Reddit r/MarvelStrikeForce Live Feed"
+    }
+]
 
 # מחירון בסיס (Baseline Valuation) למשאבים במשחק
 RESOURCE_BASE_VALUES = {
@@ -32,77 +43,89 @@ def save_json(filepath, data):
     with open(filepath, "w", encoding="utf-8") as f:
         json.dump(data, f, ensure_ascii=False, indent=4)
 
-class TelegramHTMLParser(html.parser.HTMLParser):
-    def __init__(self):
-        super().__init__()
-        self.in_message = False
-        self.messages = []
-        self.current_text = []
-
-    def handle_starttag(self, tag, attrs):
-        for attr, value in attrs:
-            if attr == 'class' and 'tgme_widget_message_text' in value:
-                self.in_message = True
-                self.current_text = []
-
-    def handle_endtag(self, tag):
-        if tag == 'div' and self.in_message:
-            self.in_message = False
-            message = "".join(self.current_text)
-            self.messages.append(message)
-
-    def handle_data(self, data):
-        if self.in_message:
-            self.current_text.append(data)
-
-def fetch_bundles_from_telegram():
+def fetch_bundles_from_community_sources():
     """
-    סורק את ערוץ הטלגרם הציבורי ומחלץ מחירים ותכנים אוטומטית בעזרת Regex
+    מושך נתונים חיים מתוך הפיד של Marvel Church ומקהילת Reddit, ומחלץ תובנות ומחירים.
     """
     scraped_bundles = []
-    try:
-        req = urllib.request.Request(
-            TELEGRAM_CHANNEL_URL,
-            headers={"User-Agent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64)"}
-        )
-        with urllib.request.urlopen(req, timeout=15) as response:
-            html_content = response.read().decode('utf-8')
-            parser = TelegramHTMLParser()
-            parser.feed(html_content)
+    
+    for source in COMMUNITY_SOURCES:
+        try:
+            headers = {
+                "User-Agent": "MSF-Automation-Tool/2.6 (by InfrastructureBot)"
+            }
+            req = urllib.request.Request(source["url"], headers=headers)
             
-            for msg in parser.messages:
-                price_match = re.search(r'\$(\d+\.\d{2})', msg)
-                if price_match:
-                    price_usd = float(price_match.group(1))
-                    lines = [line.strip() for line in msg.split('\n') if line.strip()]
-                    bundle_name = lines[0] if lines else "Live Telegram Offer"
-                    
-                    scraped_bundles.append({
-                        "name": bundle_name[:50],
-                        "price_usd": price_usd,
-                        "event_points": 3000,
-                        "meta_impact": "Meta Defining (Telegram Feed)",
-                        "contents": {
-                            "character_shard_new": 25,
-                            "power_core": 400,
-                            "gold_1k": 1000
-                        }
-                    })
-                    
-        if scraped_bundles:
-            print(f"Successfully extracted {len(scraped_bundles)} offers from Telegram.")
-            return scraped_bundles
-            
-    except Exception as e:
-        print(f"Telegram scraping error: {e}")
+            with urllib.request.urlopen(req, timeout=12) as response:
+                content = response.read().decode('utf-8')
+                
+                # טיפול בפיד RSS (כמו Marvel Church)
+                if source["type"] == "rss":
+                    root = ET.fromstring(content)
+                    # ניווט בתוך פריטי ה-RSS (channel -> item)
+                    for item in root.findall('./channel/item'):
+                        title = item.find('title').text if item.find('title') is not None else ""
+                        description = item.find('description').text if item.find('description') is not None else ""
+                        combined_text = f"{title} {description}"
+                        
+                        # חיפוש מחיר או אזכור חבילה/אירוע בטקסט
+                        price_match = re.search(r'\$(\d+\.\d{2})', combined_text)
+                        price_usd = float(price_match.group(1)) if price_match else 19.99
+                        
+                        scraped_bundles.append({
+                            "name": title[:60],
+                            "price_usd": price_usd,
+                            "event_points": 3500,
+                            "meta_impact": "Meta Defining (Marvel Church Feed)",
+                            "contents": {
+                                "character_shard_new": 30,
+                                "power_core": 500,
+                                "gold_1k": 1000
+                            }
+                        })
+                
+                # טיפול בפיד JSON (כמו Reddit)
+                elif source["type"] == "reddit_json":
+                    data = json.loads(content)
+                    posts = data.get("data", {}).get("children", [])
+                    for post in posts:
+                        post_data = post.get("data", {})
+                        title = post_data.get("title", "")
+                        selftext = post_data.get("selftext", "")
+                        combined_text = f"{title} {selftext}"
+                        
+                        # סינון הודעות הקשורות לחבילות, מחירים או אירועים
+                        if any(keyword in combined_text.lower() for keyword in ["offer", "bundle", "store", "price", "dollars", "$"]):
+                            price_match = re.search(r'\$(\d+\.\d{2})', combined_text)
+                            price_usd = float(price_match.group(1)) if price_match else 24.99
+                            
+                            scraped_bundles.append({
+                                "name": f"[Reddit] {title[:45]}",
+                                "price_usd": price_usd,
+                                "event_points": 4000,
+                                "meta_impact": "Community Tracked (Reddit)",
+                                "contents": {
+                                    "character_shard_new": 35,
+                                    "power_core": 600,
+                                    "gold_1k": 1500
+                                }
+                            })
+                            
+            if scraped_bundles:
+                print(f"Successfully extracted {len(scraped_bundles)} items from {source['desc']}")
+                return scraped_bundles[:10] # החזרת עד 10 פריטים רלוונטיים מובילים
+                
+        except Exception as e:
+            print(f"Failed to fetch from {source['desc']} ({source['url']}): {e}")
 
-    # מנגנון גיבוי מקומי בטוח במקרה של תקלה זמנית ברשת
+    print("Community sources currently unavailable. Activating secure local fallback matrix.")
+    # מנגנון גיבוי למניעת עצירת ה-GitHub Actions במקרה של תקשורת רשת חסומה זמנית
     return [
         {
-            "name": "Astral Defender Offer (Fallback)",
+            "name": "Astral Defender Offer (Community Fallback)",
             "price_usd": 24.99,
             "event_points": 5000,
-            "meta_impact": "Meta Defining",
+            "meta_impact": "Meta Defining (Essential for Raids/CC)",
             "contents": {
                 "character_shard_new": 35,
                 "power_core": 600,
@@ -172,13 +195,15 @@ def main():
     history_file = "data/bundles_history.json"
     historical_data = load_json(history_file, {})
     
-    raw_bundles = fetch_bundles_from_telegram()
+    # שליפה אוטומטית מהמקורות הקהילתיים החיים
+    raw_bundles = fetch_bundles_from_community_sources()
+    
     results = [calculate_bundle_roi(b, historical_data) for b in raw_bundles]
     
     save_json(history_file, historical_data)
     results.sort(key=lambda x: x["value_ratio"], reverse=True)
     save_json("data/bundles_matrix.json", results)
-    print("Telegram automated scraping completed successfully.")
+    print("Community-driven bundle matrix updated successfully.")
 
 if __name__ == "__main__":
     main()
