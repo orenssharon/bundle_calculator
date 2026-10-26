@@ -1,202 +1,202 @@
 [
     {
         "bundle_name": "Dracula",
-        "price_usd": 19.99,
-        "historical_low_usd": 19.99,
+        "price_usd": 49.99,
+        "historical_low_usd": 49.99,
         "is_all_time_low": true,
-        "calculated_value_usd": 65.0,
-        "value_ratio": 3.25,
-        "roi_percentage": 225.2,
+        "calculated_value_usd": 144.0,
+        "value_ratio": 2.88,
+        "roi_percentage": 188.1,
         "event_milestone": {
-            "total_points": 3500,
-            "points_per_dollar": 175.1
+            "total_points": 7500,
+            "points_per_dollar": 150.0
         },
         "farming_equivalency": {
-            "estimated_power_cores_saved": 3250,
-            "estimated_farming_days_saved": 13.0
+            "estimated_power_cores_saved": 7200,
+            "estimated_farming_days_saved": 28.8
         },
-        "meta_impact": "Meta Defining (Marvel Church Feed)",
-        "verdict": "⭐ Great Value (משתלם מאוד לאירועים) [📉 שפל היסטורי!]",
-        "last_updated": "2026-10-26 17:53:16"
+        "meta_impact": "Meta Defining (New Character Release)",
+        "verdict": "✅ Good Value (שווה קנייה) [📉 שפל היסטורי!]",
+        "last_updated": "2026-10-26 17:56:54"
     },
     {
         "bundle_name": "Nightreaver",
-        "price_usd": 19.99,
-        "historical_low_usd": 19.99,
+        "price_usd": 49.99,
+        "historical_low_usd": 49.99,
         "is_all_time_low": true,
-        "calculated_value_usd": 65.0,
-        "value_ratio": 3.25,
-        "roi_percentage": 225.2,
+        "calculated_value_usd": 144.0,
+        "value_ratio": 2.88,
+        "roi_percentage": 188.1,
         "event_milestone": {
-            "total_points": 3500,
-            "points_per_dollar": 175.1
+            "total_points": 7500,
+            "points_per_dollar": 150.0
         },
         "farming_equivalency": {
-            "estimated_power_cores_saved": 3250,
-            "estimated_farming_days_saved": 13.0
+            "estimated_power_cores_saved": 7200,
+            "estimated_farming_days_saved": 28.8
         },
-        "meta_impact": "Meta Defining (Marvel Church Feed)",
-        "verdict": "⭐ Great Value (משתלם מאוד לאירועים) [📉 שפל היסטורי!]",
-        "last_updated": "2026-10-26 17:53:16"
-    },
-    {
-        "bundle_name": "Escape From Kyln: Code Blazes",
-        "price_usd": 19.99,
-        "historical_low_usd": 19.99,
-        "is_all_time_low": true,
-        "calculated_value_usd": 65.0,
-        "value_ratio": 3.25,
-        "roi_percentage": 225.2,
-        "event_milestone": {
-            "total_points": 3500,
-            "points_per_dollar": 175.1
-        },
-        "farming_equivalency": {
-            "estimated_power_cores_saved": 3250,
-            "estimated_farming_days_saved": 13.0
-        },
-        "meta_impact": "Meta Defining (Marvel Church Feed)",
-        "verdict": "⭐ Great Value (משתלם מאוד לאירועים) [📉 שפל היסטורי!]",
-        "last_updated": "2026-10-26 17:53:16"
+        "meta_impact": "Meta Defining (New Character Release)",
+        "verdict": "✅ Good Value (שווה קנייה) [📉 שפל היסטורי!]",
+        "last_updated": "2026-10-26 17:56:54"
     },
     {
         "bundle_name": "First Breaker: Magik",
-        "price_usd": 19.99,
-        "historical_low_usd": 19.99,
+        "price_usd": 49.99,
+        "historical_low_usd": 49.99,
         "is_all_time_low": true,
-        "calculated_value_usd": 65.0,
-        "value_ratio": 3.25,
-        "roi_percentage": 225.2,
+        "calculated_value_usd": 144.0,
+        "value_ratio": 2.88,
+        "roi_percentage": 188.1,
         "event_milestone": {
-            "total_points": 3500,
-            "points_per_dollar": 175.1
+            "total_points": 7500,
+            "points_per_dollar": 150.0
         },
         "farming_equivalency": {
-            "estimated_power_cores_saved": 3250,
-            "estimated_farming_days_saved": 13.0
+            "estimated_power_cores_saved": 7200,
+            "estimated_farming_days_saved": 28.8
         },
-        "meta_impact": "Meta Defining (Marvel Church Feed)",
-        "verdict": "⭐ Great Value (משתלם מאוד לאירועים) [📉 שפל היסטורי!]",
-        "last_updated": "2026-10-26 17:53:16"
+        "meta_impact": "Meta Defining (New Character Release)",
+        "verdict": "✅ Good Value (שווה קנייה) [📉 שפל היסטורי!]",
+        "last_updated": "2026-10-26 17:56:54"
     },
     {
         "bundle_name": "The Destroyer",
-        "price_usd": 19.99,
-        "historical_low_usd": 19.99,
+        "price_usd": 49.99,
+        "historical_low_usd": 49.99,
         "is_all_time_low": true,
-        "calculated_value_usd": 65.0,
-        "value_ratio": 3.25,
-        "roi_percentage": 225.2,
+        "calculated_value_usd": 144.0,
+        "value_ratio": 2.88,
+        "roi_percentage": 188.1,
         "event_milestone": {
-            "total_points": 3500,
-            "points_per_dollar": 175.1
+            "total_points": 7500,
+            "points_per_dollar": 150.0
         },
         "farming_equivalency": {
-            "estimated_power_cores_saved": 3250,
-            "estimated_farming_days_saved": 13.0
+            "estimated_power_cores_saved": 7200,
+            "estimated_farming_days_saved": 28.8
         },
-        "meta_impact": "Meta Defining (Marvel Church Feed)",
-        "verdict": "⭐ Great Value (משתלם מאוד לאירועים) [📉 שפל היסטורי!]",
-        "last_updated": "2026-10-26 17:53:16"
-    },
-    {
-        "bundle_name": "Battleworld: Fallen Asgard",
-        "price_usd": 19.99,
-        "historical_low_usd": 19.99,
-        "is_all_time_low": true,
-        "calculated_value_usd": 65.0,
-        "value_ratio": 3.25,
-        "roi_percentage": 225.2,
-        "event_milestone": {
-            "total_points": 3500,
-            "points_per_dollar": 175.1
-        },
-        "farming_equivalency": {
-            "estimated_power_cores_saved": 3250,
-            "estimated_farming_days_saved": 13.0
-        },
-        "meta_impact": "Meta Defining (Marvel Church Feed)",
-        "verdict": "⭐ Great Value (משתלם מאוד לאירועים) [📉 שפל היסטורי!]",
-        "last_updated": "2026-10-26 17:53:16"
+        "meta_impact": "Meta Defining (New Character Release)",
+        "verdict": "✅ Good Value (שווה קנייה) [📉 שפל היסטורי!]",
+        "last_updated": "2026-10-26 17:56:54"
     },
     {
         "bundle_name": "Magik (Breaker)",
-        "price_usd": 19.99,
-        "historical_low_usd": 19.99,
+        "price_usd": 49.99,
+        "historical_low_usd": 49.99,
         "is_all_time_low": true,
-        "calculated_value_usd": 65.0,
-        "value_ratio": 3.25,
-        "roi_percentage": 225.2,
+        "calculated_value_usd": 144.0,
+        "value_ratio": 2.88,
+        "roi_percentage": 188.1,
         "event_milestone": {
-            "total_points": 3500,
-            "points_per_dollar": 175.1
+            "total_points": 7500,
+            "points_per_dollar": 150.0
         },
         "farming_equivalency": {
-            "estimated_power_cores_saved": 3250,
-            "estimated_farming_days_saved": 13.0
+            "estimated_power_cores_saved": 7200,
+            "estimated_farming_days_saved": 28.8
         },
-        "meta_impact": "Meta Defining (Marvel Church Feed)",
-        "verdict": "⭐ Great Value (משתלם מאוד לאירועים) [📉 שפל היסטורי!]",
-        "last_updated": "2026-10-26 17:53:16"
+        "meta_impact": "Meta Defining (New Character Release)",
+        "verdict": "✅ Good Value (שווה קנייה) [📉 שפל היסטורי!]",
+        "last_updated": "2026-10-26 17:56:54"
     },
     {
         "bundle_name": "Hawkeye (Robot)",
-        "price_usd": 19.99,
-        "historical_low_usd": 19.99,
+        "price_usd": 49.99,
+        "historical_low_usd": 49.99,
         "is_all_time_low": true,
-        "calculated_value_usd": 65.0,
-        "value_ratio": 3.25,
-        "roi_percentage": 225.2,
+        "calculated_value_usd": 144.0,
+        "value_ratio": 2.88,
+        "roi_percentage": 188.1,
         "event_milestone": {
-            "total_points": 3500,
-            "points_per_dollar": 175.1
+            "total_points": 7500,
+            "points_per_dollar": 150.0
         },
         "farming_equivalency": {
-            "estimated_power_cores_saved": 3250,
-            "estimated_farming_days_saved": 13.0
+            "estimated_power_cores_saved": 7200,
+            "estimated_farming_days_saved": 28.8
         },
-        "meta_impact": "Meta Defining (Marvel Church Feed)",
-        "verdict": "⭐ Great Value (משתלם מאוד לאירועים) [📉 שפל היסטורי!]",
-        "last_updated": "2026-10-26 17:53:16"
+        "meta_impact": "Meta Defining (New Character Release)",
+        "verdict": "✅ Good Value (שווה קנייה) [📉 שפל היסטורי!]",
+        "last_updated": "2026-10-26 17:56:54"
+    },
+    {
+        "bundle_name": "Jocasta",
+        "price_usd": 49.99,
+        "historical_low_usd": 49.99,
+        "is_all_time_low": true,
+        "calculated_value_usd": 144.0,
+        "value_ratio": 2.88,
+        "roi_percentage": 188.1,
+        "event_milestone": {
+            "total_points": 7500,
+            "points_per_dollar": 150.0
+        },
+        "farming_equivalency": {
+            "estimated_power_cores_saved": 7200,
+            "estimated_farming_days_saved": 28.8
+        },
+        "meta_impact": "Meta Defining (New Character Release)",
+        "verdict": "✅ Good Value (שווה קנייה) [📉 שפל היסטורי!]",
+        "last_updated": "2026-10-26 17:56:54"
+    },
+    {
+        "bundle_name": "Escape From Kyln: Code Blazes",
+        "price_usd": 24.99,
+        "historical_low_usd": 24.99,
+        "is_all_time_low": true,
+        "calculated_value_usd": 49.5,
+        "value_ratio": 1.98,
+        "roi_percentage": 98.1,
+        "event_milestone": {
+            "total_points": 5000,
+            "points_per_dollar": 200.1
+        },
+        "farming_equivalency": {
+            "estimated_power_cores_saved": 2475,
+            "estimated_farming_days_saved": 9.9
+        },
+        "meta_impact": "Essential Event Milestone",
+        "verdict": "✅ Good Value (שווה קנייה) [📉 שפל היסטורי!]",
+        "last_updated": "2026-10-26 17:56:54"
+    },
+    {
+        "bundle_name": "Battleworld: Fallen Asgard",
+        "price_usd": 24.99,
+        "historical_low_usd": 24.99,
+        "is_all_time_low": true,
+        "calculated_value_usd": 49.5,
+        "value_ratio": 1.98,
+        "roi_percentage": 98.1,
+        "event_milestone": {
+            "total_points": 5000,
+            "points_per_dollar": 200.1
+        },
+        "farming_equivalency": {
+            "estimated_power_cores_saved": 2475,
+            "estimated_farming_days_saved": 9.9
+        },
+        "meta_impact": "Essential Event Milestone",
+        "verdict": "✅ Good Value (שווה קנייה) [📉 שפל היסטורי!]",
+        "last_updated": "2026-10-26 17:56:54"
     },
     {
         "bundle_name": "Human Torch (Jim)",
         "price_usd": 19.99,
         "historical_low_usd": 19.99,
         "is_all_time_low": true,
-        "calculated_value_usd": 65.0,
-        "value_ratio": 3.25,
-        "roi_percentage": 225.2,
+        "calculated_value_usd": 28.0,
+        "value_ratio": 1.4,
+        "roi_percentage": 40.1,
         "event_milestone": {
             "total_points": 3500,
             "points_per_dollar": 175.1
         },
         "farming_equivalency": {
-            "estimated_power_cores_saved": 3250,
-            "estimated_farming_days_saved": 13.0
+            "estimated_power_cores_saved": 1400,
+            "estimated_farming_days_saved": 5.6
         },
-        "meta_impact": "Meta Defining (Marvel Church Feed)",
-        "verdict": "⭐ Great Value (משתלם מאוד לאירועים) [📉 שפל היסטורי!]",
-        "last_updated": "2026-10-26 17:53:16"
-    },
-    {
-        "bundle_name": "Jocasta",
-        "price_usd": 19.99,
-        "historical_low_usd": 19.99,
-        "is_all_time_low": true,
-        "calculated_value_usd": 65.0,
-        "value_ratio": 3.25,
-        "roi_percentage": 225.2,
-        "event_milestone": {
-            "total_points": 3500,
-            "points_per_dollar": 175.1
-        },
-        "farming_equivalency": {
-            "estimated_power_cores_saved": 3250,
-            "estimated_farming_days_saved": 13.0
-        },
-        "meta_impact": "Meta Defining (Marvel Church Feed)",
-        "verdict": "⭐ Great Value (משתלם מאוד לאירועים) [📉 שפל היסטורי!]",
-        "last_updated": "2026-10-26 17:53:16"
+        "meta_impact": "Event Progression",
+        "verdict": "⚖️ Fair (גבולי / תלוי צורך אישי) [📉 שפל היסטורי!]",
+        "last_updated": "2026-10-26 17:56:54"
     }
 ]
