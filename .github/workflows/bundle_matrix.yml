@@ -1,0 +1,31 @@
+name: Game Bundle ROI Matrix Automation
+
+on:
+  schedule:
+    - cron: '0 */8 * * *' # מופעל אוטומטית כל 8 שעות (ניתן לשנות לפי הצורך)
+  workflow_dispatch: # מאפשר הפעלה ידנית לפי דרישה ישירות מטאב ה-Actions בגיטהאב
+
+jobs:
+  run-bundle-calculator:
+    runs-on: ubuntu-latest
+    permissions:
+      contents: write # נדרש כדי לאפשר לסקריפט לבצע Commit & Push חזרה לריפו
+
+    steps:
+      - name: Checkout Repository
+        uses: actions/checkout@v4
+
+      - name: Set up Python
+        uses: actions/setup-python@v5
+        with:
+          python-version: '3.10'
+
+      - name: Run Bundle ROI Script
+        run: python bundle_calculator.py
+
+      - name: Commit and Push Results (if changed)
+        run: |
+          git config --global user.name "github-actions[bot]"
+          git config --global user.email "github-actions[bot]@users.noreply.github.com"
+          git add data/bundles_matrix.json
+          git diff --staged --quiet || (git commit -m "chore: auto-update bundle ROI matrix [skip ci]" && git push)
