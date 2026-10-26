@@ -1,6 +1,6 @@
 [
     {
-        "bundle_name": "Astral Defender Offer (Live Scraped)",
+        "bundle_name": "Astral Defender Offer (Live Feed)",
         "price_usd": 24.99,
         "historical_low_usd": 24.99,
         "is_all_time_low": true,
@@ -17,7 +17,7 @@
         },
         "meta_impact": "Meta Defining (Essential for Raids/CC)",
         "verdict": "⭐ Great Value (משתלם מאוד לאירועים) [📉 שפל היסטורי!]",
-        "last_updated": "2026-10-26 17:19:30"
+        "last_updated": "2026-10-26 17:23:50"
     },
     {
         "bundle_name": "Alliance War Gear Cache",
@@ -37,6 +37,6 @@
         },
         "meta_impact": "Standard Progression",
         "verdict": "⚖️ Fair (גבולי / תלוי צורך אישי) [📉 שפל היסטורי!]",
-        "last_updated": "2026-10-26 17:19:30"
+        "last_updated": "2026-10-26 17:23:50"
     }
 ]
