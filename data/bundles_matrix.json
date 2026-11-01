@@ -17,7 +17,7 @@
         },
         "meta_impact": "Meta Defining (War Defense Core)",
         "verdict": "✅ Good Value (שווה קנייה) [📉 שפל היסטורי!]",
-        "last_updated": "2026-10-31 19:37:24"
+        "last_updated": "2026-11-01 03:04:37"
     },
     {
         "bundle_name": "Battleworld: Fallen Asgard",
@@ -37,7 +37,7 @@
         },
         "meta_impact": "Battleworld Progression Pass",
         "verdict": "✅ Good Value (שווה קנייה) [📉 שפל היסטורי!]",
-        "last_updated": "2026-10-31 19:37:24"
+        "last_updated": "2026-11-01 03:04:37"
     },
     {
         "bundle_name": "Dracula",
@@ -57,7 +57,7 @@
         },
         "meta_impact": "Meta Defining (Top Raid Character)",
         "verdict": "✅ Good Value (שווה קנייה) [📉 שפל היסטורי!]",
-        "last_updated": "2026-10-31 19:37:24"
+        "last_updated": "2026-11-01 03:04:37"
     },
     {
         "bundle_name": "Nightreaver",
@@ -77,7 +77,7 @@
         },
         "meta_impact": "Essential Arena Contender",
         "verdict": "✅ Good Value (שווה קנייה) [📉 שפל היסטורי!]",
-        "last_updated": "2026-10-31 19:37:24"
+        "last_updated": "2026-11-01 03:04:37"
     },
     {
         "bundle_name": "Escape From Kyln: Code Blazes",
@@ -97,27 +97,7 @@
         },
         "meta_impact": "Essential Event Milestone",
         "verdict": "✅ Good Value (שווה קנייה) [📉 שפל היסטורי!]",
-        "last_updated": "2026-10-31 19:37:24"
-    },
-    {
-        "bundle_name": "Jocasta",
-        "price_usd": 24.99,
-        "historical_low_usd": 24.99,
-        "is_all_time_low": true,
-        "calculated_value_usd": 46.0,
-        "value_ratio": 1.84,
-        "roi_percentage": 84.1,
-        "event_milestone": {
-            "total_points": 3500,
-            "points_per_dollar": 140.1
-        },
-        "farming_equivalency": {
-            "estimated_power_cores_saved": 2300,
-            "estimated_farming_days_saved": 9.2
-        },
-        "meta_impact": "Tech Team Support",
-        "verdict": "✅ Good Value (שווה קנייה) [📉 שפל היסטורי!]",
-        "last_updated": "2026-10-31 19:37:24"
+        "last_updated": "2026-11-01 03:04:37"
     },
     {
         "bundle_name": "Hawkeye (Robot)",
@@ -137,27 +117,7 @@
         },
         "meta_impact": "Tactical Pivot / Rework",
         "verdict": "⚖️ Fair (גבולי / תלוי צורך אישי) [📉 שפל היסטורי!]",
-        "last_updated": "2026-10-31 19:37:24"
-    },
-    {
-        "bundle_name": "Human Torch (Jim)",
-        "price_usd": 14.99,
-        "historical_low_usd": 14.99,
-        "is_all_time_low": true,
-        "calculated_value_usd": 26.0,
-        "value_ratio": 1.73,
-        "roi_percentage": 73.4,
-        "event_milestone": {
-            "total_points": 2500,
-            "points_per_dollar": 166.8
-        },
-        "farming_equivalency": {
-            "estimated_power_cores_saved": 1300,
-            "estimated_farming_days_saved": 5.2
-        },
-        "meta_impact": "Event Progression Booster",
-        "verdict": "⚖️ Fair (גבולי / תלוי צורך אישי) [📉 שפל היסטורי!]",
-        "last_updated": "2026-10-31 19:37:24"
+        "last_updated": "2026-11-01 03:04:37"
     },
     {
         "bundle_name": "First Breaker: Magik",
@@ -177,7 +137,7 @@
         },
         "meta_impact": "Raid Team Synergy",
         "verdict": "⚖️ Fair (גבולי / תלוי צורך אישי) [📉 שפל היסטורי!]",
-        "last_updated": "2026-10-31 19:37:24"
+        "last_updated": "2026-11-01 03:04:37"
     },
     {
         "bundle_name": "Magik (Breaker)",
@@ -197,6 +157,46 @@
         },
         "meta_impact": "Raid Team Synergy",
         "verdict": "⚖️ Fair (גבולי / תלוי צורך אישי) [📉 שפל היסטורי!]",
-        "last_updated": "2026-10-31 19:37:24"
+        "last_updated": "2026-11-01 03:04:37"
+    },
+    {
+        "bundle_name": "Sabretooth (Breaker)",
+        "price_usd": 19.99,
+        "historical_low_usd": 19.99,
+        "is_all_time_low": true,
+        "calculated_value_usd": 23.5,
+        "value_ratio": 1.18,
+        "roi_percentage": 17.6,
+        "event_milestone": {
+            "total_points": 3000,
+            "points_per_dollar": 150.1
+        },
+        "farming_equivalency": {
+            "estimated_power_cores_saved": 1175,
+            "estimated_farming_days_saved": 4.7
+        },
+        "meta_impact": "Standard Progression",
+        "verdict": "❌ Trap Offer (מלכודת תקציב) [📉 שפל היסטורי!]",
+        "last_updated": "2026-11-01 03:04:37"
+    },
+    {
+        "bundle_name": "Menace",
+        "price_usd": 19.99,
+        "historical_low_usd": 19.99,
+        "is_all_time_low": true,
+        "calculated_value_usd": 23.5,
+        "value_ratio": 1.18,
+        "roi_percentage": 17.6,
+        "event_milestone": {
+            "total_points": 3000,
+            "points_per_dollar": 150.1
+        },
+        "farming_equivalency": {
+            "estimated_power_cores_saved": 1175,
+            "estimated_farming_days_saved": 4.7
+        },
+        "meta_impact": "Standard Progression",
+        "verdict": "❌ Trap Offer (מלכודת תקציב) [📉 שפל היסטורי!]",
+        "last_updated": "2026-11-01 03:04:37"
     }
 ]
