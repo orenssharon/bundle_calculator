@@ -17,7 +17,7 @@
         },
         "meta_impact": "Meta Defining (Top Raid Character)",
         "verdict": "✅ Good Value (שווה קנייה) [📉 שפל היסטורי!]",
-        "last_updated": "2026-11-13 21:43:11"
+        "last_updated": "2026-11-14 03:57:29"
     },
     {
         "bundle_name": "Nightreaver",
@@ -37,27 +37,27 @@
         },
         "meta_impact": "Essential Arena Contender",
         "verdict": "✅ Good Value (שווה קנייה) [📉 שפל היסטורי!]",
-        "last_updated": "2026-11-13 21:43:11"
+        "last_updated": "2026-11-14 03:57:29"
     },
     {
-        "bundle_name": "Escape From Kyln: Code Blazes",
-        "price_usd": 24.99,
-        "historical_low_usd": 24.99,
+        "bundle_name": "Mighty Tower: Cyclops ",
+        "price_usd": 19.99,
+        "historical_low_usd": 19.99,
         "is_all_time_low": true,
-        "calculated_value_usd": 47.0,
-        "value_ratio": 1.88,
-        "roi_percentage": 88.1,
+        "calculated_value_usd": 23.5,
+        "value_ratio": 1.18,
+        "roi_percentage": 17.6,
         "event_milestone": {
-            "total_points": 5000,
-            "points_per_dollar": 200.1
+            "total_points": 3000,
+            "points_per_dollar": 150.1
         },
         "farming_equivalency": {
-            "estimated_power_cores_saved": 2350,
-            "estimated_farming_days_saved": 9.4
+            "estimated_power_cores_saved": 1175,
+            "estimated_farming_days_saved": 4.7
         },
-        "meta_impact": "Essential Event Milestone",
-        "verdict": "✅ Good Value (שווה קנייה) [📉 שפל היסטורי!]",
-        "last_updated": "2026-11-13 21:43:11"
+        "meta_impact": "Standard Progression",
+        "verdict": "❌ Trap Offer (מלכודת תקציב) [📉 שפל היסטורי!]",
+        "last_updated": "2026-11-14 03:57:29"
     },
     {
         "bundle_name": "Breaker Event: Sabretooth",
@@ -77,7 +77,7 @@
         },
         "meta_impact": "Standard Progression",
         "verdict": "❌ Trap Offer (מלכודת תקציב) [📉 שפל היסטורי!]",
-        "last_updated": "2026-11-13 21:43:11"
+        "last_updated": "2026-11-14 03:57:29"
     },
     {
         "bundle_name": "Cyclops (Mighty)",
@@ -97,7 +97,7 @@
         },
         "meta_impact": "Standard Progression",
         "verdict": "❌ Trap Offer (מלכודת תקציב) [📉 שפל היסטורי!]",
-        "last_updated": "2026-11-13 21:43:11"
+        "last_updated": "2026-11-14 03:57:29"
     },
     {
         "bundle_name": "Ka-Zar",
@@ -117,7 +117,7 @@
         },
         "meta_impact": "Standard Progression",
         "verdict": "❌ Trap Offer (מלכודת תקציב) [📉 שפל היסטורי!]",
-        "last_updated": "2026-11-13 21:43:11"
+        "last_updated": "2026-11-14 03:57:29"
     },
     {
         "bundle_name": "Sauron",
@@ -137,7 +137,7 @@
         },
         "meta_impact": "Standard Progression",
         "verdict": "❌ Trap Offer (מלכודת תקציב) [📉 שפל היסטורי!]",
-        "last_updated": "2026-11-13 21:43:11"
+        "last_updated": "2026-11-14 03:57:29"
     },
     {
         "bundle_name": "Savage Land",
@@ -157,7 +157,7 @@
         },
         "meta_impact": "Standard Progression",
         "verdict": "❌ Trap Offer (מלכודת תקציב) [📉 שפל היסטורי!]",
-        "last_updated": "2026-11-13 21:43:11"
+        "last_updated": "2026-11-14 03:57:29"
     },
     {
         "bundle_name": "Sabretooth (Breaker)",
@@ -177,7 +177,7 @@
         },
         "meta_impact": "Standard Progression",
         "verdict": "❌ Trap Offer (מלכודת תקציב) [📉 שפל היסטורי!]",
-        "last_updated": "2026-11-13 21:43:11"
+        "last_updated": "2026-11-14 03:57:29"
     },
     {
         "bundle_name": "Menace",
@@ -197,6 +197,6 @@
         },
         "meta_impact": "Standard Progression",
         "verdict": "❌ Trap Offer (מלכודת תקציב) [📉 שפל היסטורי!]",
-        "last_updated": "2026-11-13 21:43:11"
+        "last_updated": "2026-11-14 03:57:29"
     }
 ]
